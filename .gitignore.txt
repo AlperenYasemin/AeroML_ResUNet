@@ -1,0 +1,14 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints
+
+# Model Weights (Will be uploaded to GitHub Releases instead)
+*.pt
+*.pth
+
+# Virtual Environments
+venv/
+env/
