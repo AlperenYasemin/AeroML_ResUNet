@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "AeroML",
+    "slug": "aeroml",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f1117"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aeroml.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f1117"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.aeroml.mobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "df34afb6-1915-4ca8-bc38-17261c30c0ea"
+      }
+    }
+  }
+}

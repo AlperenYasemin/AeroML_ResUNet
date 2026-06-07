@@ -1,0 +1,49 @@
+# =============================================================================
+# AeroML — Docker Compose
+#
+# Usage:
+#   docker compose up --build              # CPU-only
+#   docker compose --profile gpu up --build  # With NVIDIA GPU
+#
+# Access the app at http://localhost:8000
+# =============================================================================
+
+services:
+  # CPU-only (default)
+  aeroml:
+    build:
+      context: .
+      args:
+        TORCH_INDEX: https://download.pytorch.org/whl/cpu
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # GPU-accelerated (use with: docker compose --profile gpu up)
+  aeroml-gpu:
+    build:
+      context: .
+      args:
+        TORCH_INDEX: https://download.pytorch.org/whl/cu121
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    profiles:
+      - gpu

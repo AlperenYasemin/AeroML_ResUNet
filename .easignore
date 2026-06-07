@@ -1,0 +1,30 @@
+# Large data
+AirfRANS_Dataset
+tensordata
+sdf_cache.pt
+aero_resunet_v2_perfect.pth
+
+# Backend and frontend (not needed for mobile build)
+frontend
+notebooks
+docs
+scripts
+Dockerfile
+docker-compose.yml
+docker-entrypoint.sh
+requirements.txt
+
+# Backend Python source (NOT mobile/src)
+src/model.py
+src/main.py
+src/inference.py
+src/renderer.py
+src/sdf.py
+src/__init__.py
+src/__pycache__
+
+# Dev/build artifacts
+.git
+.claude
+__pycache__
+*.log

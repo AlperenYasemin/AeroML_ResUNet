@@ -1,0 +1,42 @@
+# ───────────── OS / editor junk ─────────────
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# ───────────── Claude / local tooling ─────────────
+.claude/
+
+# ───────────── Python ─────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+env/
+.venv/
+
+# ───────────── Jupyter ─────────────
+.ipynb_checkpoints/
+
+# ───────────── Node / frontend / mobile ─────────────
+node_modules/
+dist/
+dist-ssr/
+.expo/
+web-build/
+*.local
+*.log
+
+# ───────────── Large data & caches (NOT committed) ─────────────
+# Raw dataset (~15 GB) and preprocessed tensors (~1.5 GB) — regenerate via the notebook.
+AirfRANS_Dataset/
+tensordata/
+# Preprocessed SDF cache (>100 MB, over GitHub's limit) — regenerate via scripts/compress_sdfs.py
+sdf_cache.pt
+# All other torch tensor blobs
+*.pt
+
+# ───────────── Model weights ─────────────
+# Ignore stray weights, but keep the released model that ships with the repo.
+*.pth
+!aero_resunet_v2_perfect.pth

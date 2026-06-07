@@ -1,0 +1,50 @@
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+*.egg-info
+
+# Virtual environments
+.venv
+venv
+env
+
+# Node
+node_modules
+.next
+
+# IDE
+.vscode
+.idea
+*.swp
+
+# Git
+.git
+.gitignore
+
+# Claude
+.claude
+
+# Notebooks, docs, assets (not needed at runtime)
+notebooks
+docs
+assets
+*.ipynb
+
+# Raw dataset (15GB — not needed at runtime)
+AirfRANS_Dataset
+
+# Training data (we use sdf_cache.pt instead)
+tensordata
+
+# Mobile app (not part of the Docker image)
+mobile
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.log
+tmp

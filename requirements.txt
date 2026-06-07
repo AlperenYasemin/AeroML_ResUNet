@@ -1,8 +1,17 @@
+# Deep Learning
 torch>=2.0.0
 torchvision
 torchaudio
 torch-geometric
+
+# Scientific Computing
 numpy
 scipy
 matplotlib
+
+# Backend API
+fastapi
+uvicorn[standard]
+
+# Utilities
 tqdm
